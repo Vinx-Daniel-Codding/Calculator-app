@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vinx Massive Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+    
+</head>
+<body>
+
+    <div class="calculator">
+
+        <div class="top">
+            <h1>Vinx Calculator</h1>
+            <button id="themeBtn">🌙</button>
+        </div>
+
+        <div class="display">
+            <div id="previous"></div>
+            <input type="text" id="display" value="0" readonly>
+        </div>
+
+        <div class="memory">
+            <button onclick="memoryClear()">MC</button>
+            <button onclick="memoryRecall()">MR</button>
+            <button onclick="memoryAdd()">M+</button>
+            <button onclick="memorySubtract()">M-</button>
+            <button onclick="memoryStore()">MS</button>
+        </div>
+
+        <div class="buttons">
+
+            <button class="special" onclick="clearDisplay()">AC</button>
+            <button class="special" onclick="deleteLast()">DEL</button>
+            <button class="special" onclick="addToDisplay('(')">(</button>
+            <button class="special" onclick="addToDisplay(')')">)</button>
+            <button class="operator" onclick="addToDisplay('/')">÷</button>
+
+            <button onclick="addToDisplay('7')">7</button>
+            <button onclick="addToDisplay('8')">8</button>
+            <button onclick="addToDisplay('9')">9</button>
+            <button class="operator" onclick="addToDisplay('*')">×</button>
+            <button class="operator" onclick="square()">x²</button>
+
+            <button onclick="addToDisplay('4')">4</button>
+            <button onclick="addToDisplay('5')">5</button>
+            <button onclick="addToDisplay('6')">6</button>
+            <button class="operator" onclick="addToDisplay('-')">−</button>
+            <button class="operator" onclick="squareRoot()">√</button>
+
+            <button onclick="addToDisplay('1')">1</button>
+            <button onclick="addToDisplay('2')">2</button>
+            <button onclick="addToDisplay('3')">3</button>
+            <button class="operator" onclick="addToDisplay('+')">+</button>
+            <button class="operator" onclick="percentage()">%</button>
+
+            <button onclick="addToDisplay('0')" class="zero">0</button>
+            <button onclick="addToDisplay('.')">.</button>
+            <button class="equal" onclick="calculate()">=</button>
+
+        </div>
+
+        <div class="extra">
+
+            <button onclick="power()">xʸ</button>
+            <button onclick="reciprocal()">1/x</button>
+            <button onclick="plusMinus()">±</button>
+            <button onclick="factorial()">n!</button>
+
+        </div>
+
+        <div class="history">
+
+            <div class="history-header">
+                <h2>History</h2>
+                <button onclick="clearHistory()">Clear</button>
+            </div>
+
+            <ul id="historyList"></ul>
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
